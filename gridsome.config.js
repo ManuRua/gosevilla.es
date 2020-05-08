@@ -6,8 +6,8 @@
 
 module.exports = {
   siteName: 'Gridsome Minimal Blog Starter',
-  siteUrl: 'https://gridsome-starter-minimal-blog.netlify.com/',
-  siteDescription: 'A minimalist blog built with Gridsome',
+  siteUrl: 'https://gosevilla.github.io/',
+  siteDescription: '/gosevilla.es',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -17,7 +17,7 @@ module.exports = {
         route: '/:title',
         remark: {
           plugins: [
-            ['@gridsome/remark-prismjs', {transformInlineCode: true}]
+            ['@gridsome/remark-prismjs', { transformInlineCode: true }]
           ]
         }
       }
