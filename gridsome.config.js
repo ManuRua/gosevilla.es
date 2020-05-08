@@ -7,7 +7,8 @@
 module.exports = {
   siteName: 'Gridsome Minimal Blog Starter',
   siteUrl: 'https://gosevilla.github.io',
-  siteDescription: '/gosevilla.es',
+  pathPrefix: '/gosevilla.es',
+  siteDescription: 'A minimalist blog built with Gridsome',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
