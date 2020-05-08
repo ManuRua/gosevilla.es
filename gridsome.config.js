@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: 'Gridsome Minimal Blog Starter',
-  siteUrl: 'https://gosevilla.github.io/',
+  siteUrl: 'https://gosevilla.github.io',
   siteDescription: '/gosevilla.es',
   plugins: [
     {
