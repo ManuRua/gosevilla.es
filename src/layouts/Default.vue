@@ -1,14 +1,13 @@
 <template>
   <main class="layout" role="main">
     <Header :siteName="$page.metadata.siteName" />
-    <slot/>
+    <slot />
     <div class="footer">
       <div>
         <p>
-          Built with
-          <a target="_blank" class="link" href="//gridsome.org">Gridsome</a>
-          & Made with ❤️ by
-          <a target="_blank" class="link" href="//alex.design">Alex Brown</a>
+          Made with ❤️ by
+          <a target="_blank" class="link" href="https://manurua.es">Manu Rúa</a>
+          y Alexis Martínez
         </p>
       </div>
       <div class="footer-links">
@@ -24,35 +23,36 @@ import Header from "@/components/Header";
 
 export default {
   components: {
-    Header
-  }
-}
+    Header,
+  },
+};
 </script>
 
 <style lang="scss">
 :root {
-    --app-background-color: #FFFFFF;
-    --app-font-color: black;
+  --app-background-color: #ffffff;
+  --app-font-color: black;
 }
 
 [theme="dark"] {
-    --app-background-color: #091A28;
-    --app-font-color: white;
+  --app-background-color: #091a28;
+  --app-font-color: white;
 }
 
 [theme="sepia"] {
-    --app-background-color: #F1E7D0;
-    --app-font-color:#433422;
+  --app-background-color: #f1e7d0;
+  --app-font-color: #433422;
 }
 
 body {
   background-color: var(--app-background-color);
   color: var(--app-font-color);
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
-  font-size:1.1em;
+  font-size: 1.1em;
 }
 .layout {
   max-width: 760px;
@@ -61,26 +61,25 @@ body {
   padding-right: 20px;
 }
 .footer {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-top:60px;
-  font-size:.8em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+  font-size: 0.8em;
 }
 
 .footer a {
-  color:gray;
+  color: gray;
 }
 
 .footer-links a {
-  margin:0 4px;
+  margin: 0 4px;
 }
 
 a {
   border-bottom: 1px solid currentColor;
   color: rgb(32, 201, 151);
   text-decoration: none;
-
 }
 a:hover {
   border-bottom-color: currentColor;
@@ -94,7 +93,7 @@ a:hover {
 
   .header {
     h1 {
-      font-size:1em;
+      font-size: 1em;
     }
   }
 }

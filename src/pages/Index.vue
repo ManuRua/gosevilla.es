@@ -13,7 +13,7 @@ export default {
     PostList,
   },
   metaInfo: {
-    title: "A simple blog"
+    title: "Go Sevilla",
   },
   computed: {
     years() {
@@ -26,8 +26,8 @@ export default {
       return Object.keys(years).sort((a, b) => {
         return b - a;
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -54,5 +54,4 @@ query {
 }
 </page-query>
 
-<style>
-</style>
+<style></style>
