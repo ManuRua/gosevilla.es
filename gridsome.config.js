@@ -6,8 +6,7 @@
 
 module.exports = {
   siteName: "Go Sevilla",
-  siteUrl: "https://gosevilla.github.io",
-  pathPrefix: "/gosevilla.es",
+  siteUrl: "https://gosevilla.es",
   siteDescription: "Blog y Comunidad de Golang en Sevilla",
   titleTemplate: "%s",
   plugins: [
