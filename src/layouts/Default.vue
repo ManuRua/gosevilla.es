@@ -7,7 +7,13 @@
         <p>
           Made with ❤️ by
           <a target="_blank" class="link" href="https://manurua.es">Manu Rúa</a>
-          y Alexis Martínez
+          y
+          <a
+            target="_blank"
+            class="link"
+            href="https://www.linkedin.com/in/alemarcha/"
+            >Alexis Martínez</a
+          >
         </p>
       </div>
       <div class="footer-links">
