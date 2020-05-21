@@ -1,31 +1,34 @@
 <template>
   <div class="post-item">
-    <span class="date">{{date}}</span>
     <g-link :to="post.path" class="read">{{post.title}}</g-link>
-    <span class="time-to-read"><i>{{post.timeToRead}} min read</i></span>
+    <span class="metadata">
+      {{post.date}} ·
+      <i>{{post.timeToRead}} min</i>
+    </span>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["post"],
-  computed: {
-    date() {
-      return this.post.date.substring(0, this.post.date.length - 4);
-    }
-  }
+  props: ["post"]
 };
 </script>
 
 <style>
-.date {
-  margin-right:10px;
-  min-width: 60px;
-  display:inline-block;
+.post-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  padding: 8px;
+  flex-direction: column;
 }
-.time-to-read {
-  margin-left:10px;
-  color:gray;
-  font-size:.8em;
+.read {
+  border: 0;
+  font-size: 1.2em;
+}
+.metadata {
+  padding-top: 4px;
+  color: gray;
+  font-size: 0.8em;
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <header class="header">
-    <g-link to="/"><h1>👨‍💻 {{siteName}}</h1></g-link>
+    <g-link to="/">
+      <h1 class="title">Go Sevilla</h1>
+    </g-link>
     <ClientOnly>
       <ThemeToggle />
     </ClientOnly>
@@ -11,19 +13,26 @@
 export default {
   props: ["siteName"],
   components: {
-    ThemeToggle: () => import('@/components/ThemeToggle')
+    ThemeToggle: () => import("@/components/ThemeToggle")
   }
 };
 </script>
 
 <style lang="scss">
-  .header {
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    a {
-      color:inherit;
-      border-bottom: none;
-    }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    color: inherit;
+    border-bottom: none;
   }
+  a:hover {
+    border-bottom-color: currentColor;
+    color: gray;
+  }
+}
+.title {
+  font-size: 2em;
+}
 </style>

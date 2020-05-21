@@ -1,33 +1,25 @@
 <template>
   <Layout>
     <section class="posts">
-      <PostList v-for="year in years" :key="year" :year="year" />
+      <PostItem v-for="post in posts" :key="post.node.id" :post="post.node" />
     </section>
   </Layout>
 </template>
 
 <script>
-import PostList from "@/components/PostList";
+import PostItem from "@/components/PostItem";
 export default {
   components: {
-    PostList,
+    PostItem
   },
   metaInfo: {
-    title: "Go Sevilla",
+    title: "Go Sevilla"
   },
   computed: {
-    years() {
-      const years = {};
-      const posts = this.$page.allPost.edges;
-      posts.map((post) => {
-        const year = post.node.date.split(" ")[2];
-        years[year] = "";
-      });
-      return Object.keys(years).sort((a, b) => {
-        return b - a;
-      });
-    },
-  },
+    posts() {
+      return this.$page.allPost.edges;
+    }
+  }
 };
 </script>
 
@@ -45,7 +37,7 @@ query {
         title
         timeToRead
         description
-        date (format: "MMM D YYYY")
+        date (format: "D MMM YYYY")
         path
       }
     }
@@ -54,4 +46,8 @@ query {
 }
 </page-query>
 
-<style></style>
+<style>
+.posts {
+  flex: 1 1;
+}
+</style>

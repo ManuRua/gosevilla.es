@@ -1,0 +1,26 @@
+:root {
+    --app-background-color: #ffffff;
+    --app-font-color: black;
+    --app-link-color: var(--color-primary-0);
+    --app-header-bar-primary: var(--color-primary-0);
+    --app-header-bar-secondary-1: var(--color-secondary-1-0);
+    --app-header-bar-secondary-2: var(--color-secondary-2-0);
+}
+  
+[theme="dark"] {
+    --app-background-color: #091a28;
+    --app-font-color: white;
+    --app-link-color: var(--color-primary-0);
+    --app-header-bar-primary: var(--color-primary-0);
+    --app-header-bar-secondary-1: var(--color-secondary-1-0);
+    --app-header-bar-secondary-2: var(--color-secondary-2-0);
+}
+  
+[theme="sepia"] {
+    --app-background-color: #f1e7d0;
+    --app-font-color: #433422;
+    --app-link-color:var(--color-primary-4);
+    --app-header-bar-primary: var(--color-primary-4);
+    --app-header-bar-secondary-1: var(--color-secondary-1-4);
+    --app-header-bar-secondary-2: var(--color-secondary-2-4);
+}

@@ -1,18 +1,21 @@
 <template>
-  <main class="layout" role="main">
-    <Header :siteName="$page.metadata.siteName" />
-    <slot />
-    <div class="footer">
-      <div>
-        <p>
-          Made with ❤️ by
-          <a target="_blank" class="link" href="https://manurua.es">Manu Rúa</a>
-          y Alexis Martínez
-        </p>
-      </div>
-      <div class="footer-links">
-        <a target="_blank" href="/sitemap.xml">Sitemap</a>
-        <a target="_blank" href="/feed.xml">RSS Feed</a>
+  <main role="main">
+    <div class="header-bar"></div>
+    <div class="layout">
+      <Header :siteName="$page.metadata.siteName" />
+      <slot />
+      <div class="footer">
+        <div>
+          <p>
+            Made with ❤️ by
+            <a target="_blank" class="link" href="https://manurua.es">Manu Rúa</a>
+            y Alexis Martínez
+          </p>
+        </div>
+        <div class="footer-links">
+          <a target="_blank" href="/sitemap.xml">Sitemap</a>
+          <a target="_blank" href="/feed.xml">RSS Feed</a>
+        </div>
       </div>
     </div>
   </main>
@@ -23,27 +26,12 @@ import Header from "@/components/Header";
 
 export default {
   components: {
-    Header,
-  },
+    Header
+  }
 };
 </script>
 
 <style lang="scss">
-:root {
-  --app-background-color: #ffffff;
-  --app-font-color: black;
-}
-
-[theme="dark"] {
-  --app-background-color: #091a28;
-  --app-font-color: white;
-}
-
-[theme="sepia"] {
-  --app-background-color: #f1e7d0;
-  --app-font-color: #433422;
-}
-
 body {
   background-color: var(--app-background-color);
   color: var(--app-font-color);
@@ -55,10 +43,23 @@ body {
   font-size: 1.1em;
 }
 .layout {
-  max-width: 760px;
+  max-width: 1024px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+}
+.header-bar {
+  background: linear-gradient(
+    90deg,
+    var(--app-header-bar-secondary-1),
+    var(--app-header-bar-primary) 50%,
+    var(--app-header-bar-secondary-2)
+  );
+  padding: 3px;
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
 }
 .footer {
   display: flex;
@@ -78,12 +79,12 @@ body {
 
 a {
   border-bottom: 1px solid currentColor;
-  color: rgb(32, 201, 151);
+  color: var(--app-link-color);
   text-decoration: none;
 }
 a:hover {
   border-bottom-color: currentColor;
-  color: #686868;
+  color: var(--app-header-bar-secondary-1);
 }
 
 @media only screen and (max-width: 500px) {
