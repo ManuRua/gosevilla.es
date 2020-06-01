@@ -18,6 +18,7 @@
           </p>
         </div>
         <div class="footer-links">
+          <a target="_self" href="/newsletter">Newsletter</a>
           <a target="_blank" href="/sitemap.xml">Sitemap</a>
           <a target="_blank" href="/feed.xml">RSS Feed</a>
         </div>

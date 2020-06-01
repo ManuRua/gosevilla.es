@@ -10,6 +10,7 @@ import "prismjs/themes/prism.css";
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
+  // load scripts for newsletter
   head.script.push({
     src:
       "//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js",
